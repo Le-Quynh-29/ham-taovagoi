@@ -1,98 +1,20 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
 </head>
 <body>
+<p id="demo"></p>
+<button type="button" onclick="array.forEach(myFunction)">Tim</button>
 <script>
-    var arr =[
-        [-1,4,-6,3],
-        [-7,9,20,7],
-        [8,12,5,4],
-    ]
-    //hien thi ma tran mang 2 chieu
-    // var sout = "<table border=2>";
-    // for (let i = 0; i < arr.length; i++) {
-    //     sout += "<tr>";
-    //     for (let j = 0; j < arr[i].length; j++) {
-    //         sout += "<td>" + arr[i][j] + "</td>";
-    //     }
-    //     sout += "</tr>"
-    // }
-    // sout += "</table>"
-    // document.write(sout);
-    // for (let i = 0; i < arr.length; i++) {
-    //     document.write(arr[i] + "<br>");
-   // }
-
-    // tinh tong cac gia tri trong mang 2 chieu
-    // var sum = 0;
-    // for (let i = 0; i < arr.length; i++) {
-    //     for (let j = 0; j < arr.length; j++) {
-    //         sum += arr[i][j];
-    //     }
-    // }
-    // document.write(sum);
-    //thay doi cac gia tri am trong mang 2 chieu thanh 0
-    // for (let i = 0; i < arr.length; i++) {
-    //     for (let j = 0; j < arr.length; j++) {
-    //         if (arr[i][j] < 0) {
-    //             arr[i][j] = 0;
-    //         }
-    //     }
-    // }
-    // document.write(arr);
-    // //tim GTLN cua moi hang
-    // for (let i = 0; i < arr[0].length; i++) {
-    //         document.write("max:" + maxfirst(arr[i]) + "<br>");
-    //     }
-    //
-    // function maxfirst(arr){
-    //     var max = arr[0];
-    //     for (let i = 0; i < arr.length; i++) {
-    //             if (arr[i] > max){
-    //                 max = arr[i];
-    //         }
-    //     }return max;
-    // }
-    // for (let i = 0; i < arr.length; i++) {
-    //     let max = arr[i][0];
-    //     for (let j = 0; j < arr[i].length; j++) {
-    //         if (arr[i][j] > max) {
-    //             max = arr[i][j];
-    //         }
-    //     }            document.write(max + "<br>");
-    //
-    // }
-    //tinh trung binh cong trong mang 2 chieu
-    // var total = 0;
-    // for (let i = 0; i < arr.length; i++) {
-    //     document.write("Trung binh cong cua mang " + i +" la: " + avg(arr[i]) + "<br>")
-    //
-    // }
-    //
-    // function avg(arr){
-    //     let sum = 0;
-    //     for (let i = 0; i < arr.length; i++) {
-    //         sum += arr[i]/arr.length;
-    //     }
-    //     return sum;
-    // }
-    // for (let i = 0; i < arr[0].length; i++) {
-    //         document.write("trung binh cong cua mang thu " + i + " la : " + arr[i].join("+")/arr[i].length)
-    //     }
-    for (let i = 0; i < arr[0].length; i=i+2) {
-
-        let sum =0;
-        for (let j = 0; j < arr.length ; j++) {
-            sum += arr[j][i];
-        }
-        sum /= arr.length;
-        console.log(sum)
+    demoP = document.getElementById("demo")
+    let array = [1,"a","abc",5,true];
+    function myFunction(item, index) {
+        demoP.innerHTML = demoP.innerHTML +  "index[" + index + "]: " + item + "<br>";
     }
 
-
-    </script>
+</script>
 </body>
 </html>
